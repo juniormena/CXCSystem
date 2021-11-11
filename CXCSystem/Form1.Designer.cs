@@ -29,19 +29,21 @@ namespace CXCSystem
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.mantenimentosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tiposDeDocumentosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.transaccionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.asientosContablesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.TitlePrincipal = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
+            this.menuStrip1.BackColor = System.Drawing.Color.DarkSalmon;
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mantenimentosToolStripMenuItem,
@@ -62,13 +64,6 @@ namespace CXCSystem
             this.mantenimentosToolStripMenuItem.Name = "mantenimentosToolStripMenuItem";
             this.mantenimentosToolStripMenuItem.Size = new System.Drawing.Size(126, 24);
             this.mantenimentosToolStripMenuItem.Text = "Mantenimentos";
-            // 
-            // salirToolStripMenuItem
-            // 
-            this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(52, 24);
-            this.salirToolStripMenuItem.Text = "Salir";
-            this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
             // clientesToolStripMenuItem
             // 
@@ -98,20 +93,30 @@ namespace CXCSystem
             this.asientosContablesToolStripMenuItem.Text = "Asientos Contables";
             this.asientosContablesToolStripMenuItem.Click += new System.EventHandler(this.asientosContablesToolStripMenuItem_Click);
             // 
+            // salirToolStripMenuItem
+            // 
+            this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(52, 24);
+            this.salirToolStripMenuItem.Text = "Salir";
+            this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
+            // 
             // TitlePrincipal
             // 
             this.TitlePrincipal.AutoSize = true;
-            this.TitlePrincipal.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TitlePrincipal.Location = new System.Drawing.Point(132, 46);
+            this.TitlePrincipal.BackColor = System.Drawing.Color.DarkSalmon;
+            this.TitlePrincipal.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TitlePrincipal.Location = new System.Drawing.Point(462, 28);
             this.TitlePrincipal.Name = "TitlePrincipal";
-            this.TitlePrincipal.Size = new System.Drawing.Size(542, 39);
+            this.TitlePrincipal.Size = new System.Drawing.Size(310, 31);
             this.TitlePrincipal.TabIndex = 1;
-            this.TitlePrincipal.Text = "CUENTAS X COBRAR SYSTEM";
+            this.TitlePrincipal.Text = "CUENTAS X COBRAR";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.TitlePrincipal);
             this.Controls.Add(this.menuStrip1);
