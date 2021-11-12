@@ -1,7 +1,7 @@
 ﻿
 namespace CXCSystem
 {
-    partial class Form1
+    partial class Principal
     {
         /// <summary>
         /// Required designer variable.
@@ -37,6 +37,8 @@ namespace CXCSystem
             this.asientosContablesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.TitlePrincipal = new System.Windows.Forms.Label();
+            this.cerrarSesionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.salirToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -50,7 +52,7 @@ namespace CXCSystem
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 28);
-            this.menuStrip1.TabIndex = 0;
+            this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // mantenimentosToolStripMenuItem
@@ -94,35 +96,51 @@ namespace CXCSystem
             // 
             // salirToolStripMenuItem
             // 
+            this.salirToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cerrarSesionToolStripMenuItem,
+            this.salirToolStripMenuItem1});
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(52, 24);
-            this.salirToolStripMenuItem.Text = "Salir";
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(85, 24);
+            this.salirToolStripMenuItem.Text = "Opciones";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
             // TitlePrincipal
             // 
             this.TitlePrincipal.AutoSize = true;
-            this.TitlePrincipal.BackColor = System.Drawing.Color.DarkSalmon;
-            this.TitlePrincipal.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TitlePrincipal.Location = new System.Drawing.Point(462, 28);
+            this.TitlePrincipal.BackColor = System.Drawing.Color.Transparent;
+            this.TitlePrincipal.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
+            this.TitlePrincipal.ForeColor = System.Drawing.Color.White;
+            this.TitlePrincipal.Location = new System.Drawing.Point(418, 111);
             this.TitlePrincipal.Name = "TitlePrincipal";
-            this.TitlePrincipal.Size = new System.Drawing.Size(310, 31);
-            this.TitlePrincipal.TabIndex = 1;
+            this.TitlePrincipal.Size = new System.Drawing.Size(340, 36);
+            this.TitlePrincipal.TabIndex = 3;
             this.TitlePrincipal.Text = "CUENTAS X COBRAR";
             // 
-            // Form1
+            // cerrarSesionToolStripMenuItem
+            // 
+            this.cerrarSesionToolStripMenuItem.Name = "cerrarSesionToolStripMenuItem";
+            this.cerrarSesionToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.cerrarSesionToolStripMenuItem.Text = "Cerrar Sesion";
+            this.cerrarSesionToolStripMenuItem.Click += new System.EventHandler(this.cerrarSesionToolStripMenuItem_Click);
+            // 
+            // salirToolStripMenuItem1
+            // 
+            this.salirToolStripMenuItem1.Name = "salirToolStripMenuItem1";
+            this.salirToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
+            this.salirToolStripMenuItem1.Text = "Salir";
+            this.salirToolStripMenuItem1.Click += new System.EventHandler(this.salirToolStripMenuItem1_Click_1);
+            // 
+            // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::CXCSystem.Properties.Resources.cuentas_por_cobrar;
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.TitlePrincipal);
             this.Controls.Add(this.menuStrip1);
-            this.MainMenuStrip = this.menuStrip1;
-            this.MaximizeBox = false;
-            this.Name = "Form1";
-            this.Text = "Menu Principal";
+            this.Controls.Add(this.TitlePrincipal);
+            this.Name = "Principal";
+            this.Text = "Principal";
+            this.Load += new System.EventHandler(this.Principal_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -140,6 +158,7 @@ namespace CXCSystem
         private System.Windows.Forms.ToolStripMenuItem asientosContablesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
         private System.Windows.Forms.Label TitlePrincipal;
+        private System.Windows.Forms.ToolStripMenuItem cerrarSesionToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem1;
     }
 }
-
