@@ -10,15 +10,20 @@ using System.Windows.Forms;
 
 namespace CXCSystem
 {
-    public partial class Form1 : Form
+    public partial class Principal : Form
     {
         Clientes cliente;
         TipoDocumentos tipoDocumentos;
         Transacciones transacciones;
         AsientoContables asientoContables;
-        public Form1()
+        public Principal()
         {
             InitializeComponent();
+        }
+
+        private void salirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+          
         }
 
         private void clientesToolStripMenuItem_Click(object sender, EventArgs e)
@@ -33,21 +38,38 @@ namespace CXCSystem
             tipoDocumentos.ShowDialog();
         }
 
-        private void transaccionesToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            transacciones = new Transacciones();
-            transacciones.ShowDialog();
-        }
-
         private void asientosContablesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             asientoContables = new AsientoContables();
             asientoContables.ShowDialog();
         }
 
-        private void salirToolStripMenuItem_Click(object sender, EventArgs e)
+        private void Principal_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void transaccionesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            transacciones = new Transacciones();
+            transacciones.ShowDialog();
+        }
+
+        private void salirToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void salirToolStripMenuItem1_Click_1(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void cerrarSesionToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
+            Login login = new Login();
+            login.Show();
         }
     }
 }
