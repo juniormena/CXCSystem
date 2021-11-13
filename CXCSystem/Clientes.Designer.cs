@@ -46,12 +46,14 @@ namespace CXCSystem
             this.Cedula = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Credito = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnClear
             // 
-            this.btnClear.Location = new System.Drawing.Point(856, 230);
+            this.btnClear.Location = new System.Drawing.Point(228, 195);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(100, 37);
             this.btnClear.TabIndex = 28;
@@ -66,14 +68,14 @@ namespace CXCSystem
             this.cbxEstado.Items.AddRange(new object[] {
             "A",
             "I"});
-            this.cbxEstado.Location = new System.Drawing.Point(756, 179);
+            this.cbxEstado.Location = new System.Drawing.Point(162, 141);
             this.cbxEstado.Name = "cbxEstado";
             this.cbxEstado.Size = new System.Drawing.Size(147, 24);
             this.cbxEstado.TabIndex = 27;
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(750, 230);
+            this.btnDelete.Location = new System.Drawing.Point(122, 195);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(100, 37);
             this.btnDelete.TabIndex = 26;
@@ -84,7 +86,7 @@ namespace CXCSystem
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(652, 182);
+            this.label4.Location = new System.Drawing.Point(58, 144);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(52, 17);
             this.label4.TabIndex = 25;
@@ -93,7 +95,7 @@ namespace CXCSystem
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(652, 145);
+            this.label3.Location = new System.Drawing.Point(58, 107);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(92, 17);
             this.label3.TabIndex = 24;
@@ -101,7 +103,7 @@ namespace CXCSystem
             // 
             // txtCredito
             // 
-            this.txtCredito.Location = new System.Drawing.Point(756, 142);
+            this.txtCredito.Location = new System.Drawing.Point(162, 104);
             this.txtCredito.Name = "txtCredito";
             this.txtCredito.Size = new System.Drawing.Size(147, 22);
             this.txtCredito.TabIndex = 23;
@@ -109,7 +111,7 @@ namespace CXCSystem
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(652, 108);
+            this.label1.Location = new System.Drawing.Point(58, 70);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(52, 17);
             this.label1.TabIndex = 22;
@@ -117,7 +119,7 @@ namespace CXCSystem
             // 
             // txtCedula
             // 
-            this.txtCedula.Location = new System.Drawing.Point(756, 105);
+            this.txtCedula.Location = new System.Drawing.Point(162, 67);
             this.txtCedula.MaxLength = 11;
             this.txtCedula.Name = "txtCedula";
             this.txtCedula.Size = new System.Drawing.Size(147, 22);
@@ -125,7 +127,7 @@ namespace CXCSystem
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(655, 230);
+            this.btnAdd.Location = new System.Drawing.Point(27, 195);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(89, 37);
             this.btnAdd.TabIndex = 20;
@@ -136,7 +138,7 @@ namespace CXCSystem
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(652, 64);
+            this.label2.Location = new System.Drawing.Point(58, 26);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(58, 17);
             this.label2.TabIndex = 19;
@@ -144,7 +146,7 @@ namespace CXCSystem
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(756, 64);
+            this.txtNombre.Location = new System.Drawing.Point(162, 26);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(147, 22);
             this.txtNombre.TabIndex = 18;
@@ -152,6 +154,7 @@ namespace CXCSystem
             // dgvClientes
             // 
             this.dgvClientes.AllowUserToDeleteRows = false;
+            this.dgvClientes.BackgroundColor = System.Drawing.Color.DarkSalmon;
             this.dgvClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvClientes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Id,
@@ -214,30 +217,41 @@ namespace CXCSystem
             this.Estado.Name = "Estado";
             this.Estado.ReadOnly = true;
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.btnClear);
+            this.panel1.Controls.Add(this.txtNombre);
+            this.panel1.Controls.Add(this.cbxEstado);
+            this.panel1.Controls.Add(this.btnAdd);
+            this.panel1.Controls.Add(this.btnDelete);
+            this.panel1.Controls.Add(this.txtCedula);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.txtCredito);
+            this.panel1.Location = new System.Drawing.Point(610, 40);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(376, 272);
+            this.panel1.TabIndex = 29;
+            // 
             // Clientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.DarkSalmon;
             this.ClientSize = new System.Drawing.Size(1008, 350);
-            this.Controls.Add(this.btnClear);
-            this.Controls.Add(this.cbxEstado);
-            this.Controls.Add(this.btnDelete);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.txtCredito);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.txtCedula);
-            this.Controls.Add(this.btnAdd);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.txtNombre);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.dgvClientes);
             this.MaximizeBox = false;
             this.Name = "Clientes";
             this.Text = "Clientes";
             this.Load += new System.EventHandler(this.Clientes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -260,5 +274,6 @@ namespace CXCSystem
         private System.Windows.Forms.DataGridViewTextBoxColumn Cedula;
         private System.Windows.Forms.DataGridViewTextBoxColumn Credito;
         private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
+        private System.Windows.Forms.Panel panel1;
     }
 }

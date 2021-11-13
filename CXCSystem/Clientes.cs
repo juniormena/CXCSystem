@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CXCSystem.Utils;
 
 namespace CXCSystem
 {
@@ -74,6 +75,12 @@ namespace CXCSystem
             {
                 ok = false;
                 errorProvider.SetError(txtNombre, "Ingresar nombre");
+            }
+
+            if (Util.ValideIdentificactionCard(txtCedula.Text) == false) 
+            {
+                ok = false;
+                errorProvider.SetError(txtCedula, "Cedula Invalida");
             }
             if (txtCedula.Text == "")
             {

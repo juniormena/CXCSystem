@@ -43,12 +43,15 @@ namespace CXCSystem
             this.btnAdd = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.txtDescripcion = new System.Windows.Forms.TextBox();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTipoDocs)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgvTipoDocs
             // 
             this.dgvTipoDocs.AllowUserToDeleteRows = false;
+            this.dgvTipoDocs.BackgroundColor = System.Drawing.Color.DarkSalmon;
             this.dgvTipoDocs.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvTipoDocs.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Id,
@@ -103,7 +106,7 @@ namespace CXCSystem
             // 
             // btnClear
             // 
-            this.btnClear.Location = new System.Drawing.Point(842, 197);
+            this.btnClear.Location = new System.Drawing.Point(226, 145);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(100, 37);
             this.btnClear.TabIndex = 37;
@@ -118,14 +121,14 @@ namespace CXCSystem
             this.cbxEstado.Items.AddRange(new object[] {
             "A",
             "I"});
-            this.cbxEstado.Location = new System.Drawing.Point(761, 147);
+            this.cbxEstado.Location = new System.Drawing.Point(145, 95);
             this.cbxEstado.Name = "cbxEstado";
             this.cbxEstado.Size = new System.Drawing.Size(147, 24);
             this.cbxEstado.TabIndex = 36;
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(736, 197);
+            this.btnDelete.Location = new System.Drawing.Point(120, 145);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(100, 37);
             this.btnDelete.TabIndex = 35;
@@ -136,7 +139,7 @@ namespace CXCSystem
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(638, 150);
+            this.label4.Location = new System.Drawing.Point(22, 98);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(52, 17);
             this.label4.TabIndex = 34;
@@ -145,7 +148,7 @@ namespace CXCSystem
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(638, 109);
+            this.label1.Location = new System.Drawing.Point(22, 57);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(111, 17);
             this.label1.TabIndex = 33;
@@ -153,14 +156,14 @@ namespace CXCSystem
             // 
             // txtCuentaContable
             // 
-            this.txtCuentaContable.Location = new System.Drawing.Point(761, 106);
+            this.txtCuentaContable.Location = new System.Drawing.Point(145, 54);
             this.txtCuentaContable.Name = "txtCuentaContable";
             this.txtCuentaContable.Size = new System.Drawing.Size(147, 22);
             this.txtCuentaContable.TabIndex = 32;
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(641, 197);
+            this.btnAdd.Location = new System.Drawing.Point(25, 145);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(89, 37);
             this.btnAdd.TabIndex = 31;
@@ -171,7 +174,7 @@ namespace CXCSystem
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(638, 68);
+            this.label2.Location = new System.Drawing.Point(22, 16);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(82, 17);
             this.label2.TabIndex = 30;
@@ -179,33 +182,45 @@ namespace CXCSystem
             // 
             // txtDescripcion
             // 
-            this.txtDescripcion.Location = new System.Drawing.Point(761, 65);
+            this.txtDescripcion.Location = new System.Drawing.Point(145, 13);
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(147, 22);
             this.txtDescripcion.TabIndex = 29;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.txtDescripcion);
+            this.panel1.Controls.Add(this.btnClear);
+            this.panel1.Controls.Add(this.btnAdd);
+            this.panel1.Controls.Add(this.cbxEstado);
+            this.panel1.Controls.Add(this.txtCuentaContable);
+            this.panel1.Controls.Add(this.btnDelete);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Location = new System.Drawing.Point(629, 68);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(352, 193);
+            this.panel1.TabIndex = 39;
             // 
             // TipoDocumentos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.DarkSalmon;
             this.ClientSize = new System.Drawing.Size(1008, 350);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.dgvTipoDocs);
-            this.Controls.Add(this.btnClear);
-            this.Controls.Add(this.cbxEstado);
-            this.Controls.Add(this.btnDelete);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.txtCuentaContable);
-            this.Controls.Add(this.btnAdd);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.txtDescripcion);
             this.MaximizeBox = false;
             this.Name = "TipoDocumentos";
             this.Text = "Tipo de Documentos";
             this.Load += new System.EventHandler(this.TipoDocumentos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvTipoDocs)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -225,5 +240,6 @@ namespace CXCSystem
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtDescripcion;
+        private System.Windows.Forms.Panel panel1;
     }
 }

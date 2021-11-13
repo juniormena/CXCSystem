@@ -93,7 +93,7 @@ namespace CXCSystem
             using (CxCEntities db = new CxCEntities())
             {
 
-                dgvTransacciones.DataSource = db.Transacciones.Select(p => new { p.Id,p.Id_transaccion, p.Tipo_Mov, p.Num_doc, p.Fecha, p.Monto, p.TipoDoc_ID, p.Cliente_ID }).ToList();
+                dgvTransacciones.DataSource = db.Transacciones.Select(p => new { p.Id,p.Id_transaccion, p.Tipo_Mov, p.Num_doc, p.Fecha, p.Monto, p.Cliente.Nombre, p.Tipos_Documentos.Descripcion }).ToList();
 
             }
         }
@@ -106,39 +106,48 @@ namespace CXCSystem
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            if (ValidarCampos())
+            try
             {
-                Guid myuuid = Guid.NewGuid();
-                string myuuidAsString = myuuid.ToString();
-
-                ComboBoxItem itemCliente, itemTipoDoc;
-                itemCliente = (ComboBoxItem)cbxCliente.SelectedItem;
-                itemTipoDoc = (ComboBoxItem)cbxTipoDoc.SelectedItem;
-                int clienteId = itemCliente.Value;
-                int tipoDocId = itemTipoDoc.Value;
-
-                transaccione.Id_transaccion = myuuidAsString.Split('-')[0];
-                transaccione.Cliente_ID = clienteId;
-                transaccione.TipoDoc_ID = tipoDocId;
-                transaccione.Monto = int.Parse(txtMonto.Text.Trim());
-                transaccione.Num_doc = txtNumDoc.Text.Trim();
-                transaccione.Fecha = dtFecha.Value;
-                transaccione.Tipo_Mov = cbxMovimiento.Text.Trim();
-
-                using (CxCEntities db = new CxCEntities())
+                if (ValidarCampos())
                 {
+                    Guid myuuid = Guid.NewGuid();
+                    string myuuidAsString = myuuid.ToString();
 
-                    if (transaccione.Id == 0)//Insert
-                        db.Transacciones.Add(transaccione);
-                    else //Update
-                        db.Entry(transaccione).State = EntityState.Modified;
-                    db.SaveChanges();
+                    ComboBoxItem itemCliente, itemTipoDoc;
+                    itemCliente = (ComboBoxItem)cbxCliente.SelectedItem;
+                    itemTipoDoc = (ComboBoxItem)cbxTipoDoc.SelectedItem;
+                    int clienteId = itemCliente.Value;
+                    int tipoDocId = itemTipoDoc.Value;
+
+                    transaccione.Id_transaccion = myuuidAsString.Split('-')[0];
+                    transaccione.Cliente_ID = clienteId;
+                    transaccione.TipoDoc_ID = tipoDocId;
+                    transaccione.Monto = int.Parse(txtMonto.Text.Trim());
+                    transaccione.Num_doc = txtNumDoc.Text.Trim();
+                    transaccione.Fecha = dtFecha.Value;
+                    transaccione.Tipo_Mov = cbxMovimiento.Text.Trim();
+
+                    using (CxCEntities db = new CxCEntities())
+                    {
+
+                        if (transaccione.Id == 0)//Insert
+                            db.Transacciones.Add(transaccione);
+                        else //Update
+                            db.Entry(transaccione).State = EntityState.Modified;
+                        db.SaveChanges();
+                    }
+                    Clear();
+                    BorrarMensajeError();
+                    PopulateDataGridView();
+                    MessageBox.Show("Enviado correctamente");
                 }
-                Clear();
-                BorrarMensajeError();
-                PopulateDataGridView();
-                MessageBox.Show("Enviado correctamente");
             }
+            catch (Exception ex)
+            {
+                Util.MessageError(ex.Message);
+                
+            }
+            
         }
 
         private void Transacciones_Load(object sender, EventArgs e)
