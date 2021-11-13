@@ -124,6 +124,8 @@
     <Compile Include="User.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Utils\ComboBoxItem.cs" />
+    <Compile Include="Utils\Util.cs" />
     <EmbeddedResource Include="AsientoContables.resx">
       <DependentUpon>AsientoContables.cs</DependentUpon>
     </EmbeddedResource>
